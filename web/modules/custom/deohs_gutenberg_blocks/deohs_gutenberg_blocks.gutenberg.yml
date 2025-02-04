@@ -6,10 +6,6 @@ libraries-edit:
 libraries-view:
   - deohs_gutenberg_blocks/blocks
 
-# Blocks which can be rendered server-side using Twig templates.
-
-# Add custom blocks to the following section.
-# The blocks defined here can be enabled or disabled for each content type.
 custom-blocks:
   categories:
     - reference: deohs-gutenberg-blocks
@@ -22,9 +18,9 @@ custom-blocks:
         - id: deohs-gutenberg-block/deohs-profile-card
           name: DEOHS Profile Card
         - id: deohs-gutenberg-block/deohs-card-vertical
-          name: DEOHS Horizontal Card
-        - id: deohs-gutenberg-block/deohs-card-horizontal
           name: Vertical Card
+        - id: deohs-gutenberg-block/deohs-card-horizontal
+          name: Horizontal Card
         - id: deohs-gutenberg-block/deohs-card-square
           name: DEOHS Square Card
         - id: deohs-gutenberg-block/deohs-grid-cards-profile
@@ -39,10 +35,28 @@ custom-blocks:
           name: Image-backed Card
 
 theme-support:
-
   __experimentalFeatures:
     typography:
-      customFontSize: false  # Disables font-size selection globally
+      customFontSize: false
+    color:
+      background: false
+      palette:
+        theme:
+        - slug: purple
+          color: "#32006E"
+          name: Purple
+        - slug: black
+          color: "#000000"
+          name: Black
+        - slug: light-grey
+          color: "#E5E5E5"
+          name: Light Grey
+        - slug: dark-grey
+          color: "#404040"
+          name: Dark Grey
+        - slug: white
+          color: "#ffffff"
+          name: White
 
     blocks:
       core/heading:
@@ -63,12 +77,12 @@ theme-support:
               - slug: dark-grey
                 color: "#404040"
                 name: Dark Grey
-              - slug: White
+              - slug: white
                 color: "#ffffff"
                 name: White
         typography:
-            customFontSize: false
-            fontSize: false
+          customFontSize: false
+          fontSize: false
       core/paragraph:
         color:
           background: false
@@ -84,9 +98,9 @@ theme-support:
               - slug: black
                 color: "#000000"
                 name: Black
-              - slug: White
+              - slug: white
                 color: "#ffffff"
                 name: White
         typography:
-            customFontSize: false
-            fontSize: false
+          customFontSize: false
+          fontSize: false
